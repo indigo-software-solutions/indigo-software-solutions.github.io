@@ -1,0 +1,168 @@
+/*------------------------------------------------------------------
+Porfolio
+*/
+.portfolio {
+	background-color: $white;
+
+	.column + .column:last-child, 
+	.columns + .columns:last-child {
+		float: left;
+	}
+
+	figure {
+		margin: 0;
+		max-width: 377px;
+		width: 100%;
+		margin: 0 auto 7%;
+		position: relative;
+		transition: all .3s ease-in;
+		overflow: hidden;
+
+		&:hover {
+
+			figcaption {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		> a {
+			display: block;
+		}
+
+		figcaption {
+			background-color: $oil;
+			background: linear-gradient(to top, rgba($oil, 0.8) 0%,rgba(0, 0, 0, 0) 100%); 
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			text-align: center;
+			cursor: pointer;
+			opacity: 0;
+			transform: translateY(40%);
+			transition: all .3s ease-in;
+
+			a {
+				color: $white;
+				transition: color .3s ease-in;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-size: 1.125rem; //18px
+				text-transform: uppercase;
+				margin: 35% 0 5%;
+			}
+
+			small, p {
+				font-size: 0.875rem; //14px
+				margin: 0;
+			}
+
+			@media only screen and (max-width: 80rem) {
+				opacity: 1;
+				transform: none;
+				transition: none;
+			}
+		}
+	}
+}
+
+.big-intro {
+	background-color: $smoke;
+
+	.big-intro__heading {
+		font-size: 1.875rem; //30px
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	@media only screen and (min-width: 40.063em) {
+
+		p {
+			color: $steel;
+			margin: 0 auto;
+			width: 50%;
+		}
+		
+	}
+}
+
+// Our work
+.filter-control {
+	margin-bottom: em(40);
+
+	button {
+		padding: 0;
+		background: none;
+		color: $oil;
+		font-family: $font-family-serif;
+		font-size: 14px;
+		font-style: italic;
+		margin-right: 1.25rem;
+		transition: color .3s ease-in;
+
+		&:active,
+		&:focus {
+			outline: none;
+		}
+
+		&.active,
+		&:hover {
+			color: $secondary-color;
+		}
+
+		&:after {
+			font-family: 'FontAwesome';
+			content: '\f069';
+			margin-left: 20px;
+			font-size: 8px;
+			color: $oil;
+		}
+
+		&:last-child {
+			margin-right: 0;
+
+			&:after {
+				content: '';
+			}
+		}
+	}
+}
+
+.funfact {
+	padding: em(80) 0 0;
+	text-align: center;
+
+	.fa,
+	.funfact__number {
+		color: #8a8a8a;
+		line-height: 1;
+	}
+
+	.fa {
+		font-size: 2.5rem; //40px
+	}
+
+	.funfact__title {
+		color: $secondary-color;
+		font-style: italic;
+		margin: em(10) 0;
+	}
+
+	.funfact__number {
+		font-size: 3.75rem; //60px
+		font-weight: 700;
+	}
+
+	.fa,
+	.funfact__title,
+	.funfact__number {
+		display: block;
+	}
+}

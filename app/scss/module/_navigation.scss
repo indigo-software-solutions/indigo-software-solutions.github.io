@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------
+Main Navigation
+*/		
+
+.top-bar {
+	height: 4.375rem;
+}
+
+// top bar li bg
+.top-bar-section ul li {
+	background: transparent;
+}
+
+// site brand name
+.top-bar .name h1, 
+.top-bar .name h2, 
+.top-bar .name h3, 
+.top-bar .name h4, 
+.top-bar .name p, 
+.top-bar .name span {
+	font-family: 'caviar_dreamsregular', 'Open Sans', sans-serif;
+	font-size: 35px;
+	margin-top: 0.8em;
+
+	a {
+		color: $primary-color;
+	}
+}
+
+@media only screen and (min-width: 40.0625em) {
+
+	.top-bar {
+		height: auto;
+	}
+	
+	.top-bar-section li.active:not(.has-form) a:not(.button),
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		padding-top: 2em;
+		text-transform: uppercase;
+	}
+
+}
+
+@media only screen and (max-width: 40em) { 
+
+	.top-bar-section ul {
+		background-color: $secondary-color;
+		position: relative;
+		z-index: 100;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	.top-bar-section ul li > a {
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	.top-bar-section ul li.active > a {
+		background-color: darken($secondary-color, 10%);
+	}
+
+}
